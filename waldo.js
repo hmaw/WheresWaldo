@@ -32,7 +32,11 @@ closeButton.onclick = closeGame
 */
 function incrementCounter (color) {
     let points = document.getElementById('points')
-    points.style.backgroundColor = color
+	let count = Number( points.dataset.counter )
+	count-=1;
+	points.dataset.counter = count
+	points.style.backgroundColor = color
+	points.innerHTML = count
 }
 
 function show (target) {
