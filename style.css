@@ -1,0 +1,63 @@
+body{
+    font-family: Helvetica, sans-serif;
+}
+
+#waldoGame{
+    background-color: green;
+    height: 800px;
+    width: 1200px;
+    position: relative;
+}
+.target{
+    list-style: none
+} 
+.target li{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+#first_target{
+    background-color: red;
+    right:20px;
+    bottom: 5px;
+}
+#second_target{
+    background-color: orange;
+    left: 40px;
+    bottom: 70px;
+    display:none;
+}
+#third_target{
+    background-color: blue;
+    right:200px;
+    top: 50px;
+    display:none;
+}
+#closeButton{
+    position: absolute;
+    background-color: aliceblue;
+    right:5px;
+    top:5px;
+    height:20px;
+    width:20px;
+    text-align: center;
+    padding: 8px 4px 2px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+}
+#indicator{
+    position: absolute;
+    background-color: antiquewhite;
+    left: 15px;
+    top: 15px;
+    padding: 40px;
+    border-radius: 50%;
+}
+.icon{
+    background-color: red;
+    height: 15px;
+    width: 15px;
+}
