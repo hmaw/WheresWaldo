@@ -10,7 +10,7 @@ let first = document.getElementById('first_target')
 first.onclick = firstComplete
 
 function firstComplete(){
-    incrementCounter('orange')
+    incrementCounter('gold')
     show('second_target')
     playSound('Birds Chirping')
     hide('first_target')
