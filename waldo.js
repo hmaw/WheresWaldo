@@ -10,16 +10,16 @@ let first = document.getElementById('first_target')
 first.onclick = firstComplete
 
 function firstComplete(){
-    updateIcon('orange')
+    incrementCounter('orange')
     show('second_target')
     playSound('Birds Chirping')
-    hide('first_target') 
+    hide('first_target')
 }
 
-function updateIcon(color){
-    let icon = document.getElementById('icon')
-    icon.style.backgroundColor = color
-    
+function incrementCounter(color){
+    let points = document.getElementById('points')
+    points.style.backgroundColor = color
+
 }
 function show(target){
     let nextTarget = document.getElementById(target)
@@ -38,7 +38,7 @@ function hide(target){
 //Going forwards,  make code reusable for multiple colors
 //embolish and play and modify nice
 //sound/alert
-//fade in and out transistions  
+//fade in and out transistions
 //counddown of how many left
 //skip
 //return to root or game?

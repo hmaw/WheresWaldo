@@ -10,7 +10,7 @@ body{
 }
 .target{
     list-style: none
-} 
+}
 .target li{
     display: inline-block;
     width: 100px;
@@ -48,7 +48,7 @@ body{
     text-decoration: none;
     color: black;
 }
-#indicator{
+.indicator{
     position: absolute;
     background-color: antiquewhite;
     left: 15px;
@@ -56,8 +56,9 @@ body{
     padding: 40px;
     border-radius: 50%;
 }
-.icon{
+.indicator .points{
     background-color: red;
     height: 15px;
     width: 15px;
+	display: block;
 }
