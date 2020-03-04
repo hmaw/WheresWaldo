@@ -5,6 +5,9 @@
 	3) 		Count down the number of remaining tests
 	4) 		Closing minigame will save your progress?
 	5) 		Allow user to skip a trial?
+	6) 		Game screen is  larger than viewport
+	7) 		Game screen is draggable
+	8)		Add Game screen and icon placeholder image
 ============================================================
 */
 
