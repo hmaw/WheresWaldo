@@ -55,6 +55,7 @@ body{
 	background-color: lightsalmon;
     height: 800px;
 	position: relative;
+	background: gold url("images/placeholder_screen.jpg") bottom right;
 }
 .target {
     list-style: none;
