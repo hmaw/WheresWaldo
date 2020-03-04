@@ -36,7 +36,7 @@ closeButton.onclick = closeGame
 function incrementCounter (color) {
     let points = document.getElementById('points')
 	let count = Number( points.dataset.counter )
-	count-=1;
+	count = !color ? 0 : count - 1
 	points.dataset.counter = count
 	points.style.backgroundColor = color
 	points.innerHTML = count
@@ -70,10 +70,23 @@ function firstComplete(){
     incrementCounter('gold')
 	changeIcon('placeholder_icon_02.png')
     show('second_target')
-    playSound('Success Sound')
+    playSound('SUCCES MUSIC')
     hide('first_target')
 }
-
+function secondComplete(){
+    incrementCounter('cyan')
+	changeIcon('placeholder_icon_03.png')
+    show('third_target')
+    playSound('YOUR ON FIRE!!')
+    hide('second_target')
+}
+function thirdComplete(){
+    incrementCounter(null)
+	changeIcon('none')
+    // show('')
+    playSound('DONE')
+    hide('third_target')
+}
 /*		Execute Controller Functions
 ============================================================
 		We want to execute them when the user clicks,
@@ -81,4 +94,8 @@ function firstComplete(){
 ============================================================
 */
 let first = document.getElementById('first_target')
+let second = document.getElementById('second_target')
+let third = document.getElementById('third_target')
 first.onclick = firstComplete
+second.onclick = secondComplete
+third.onclick = thirdComplete
