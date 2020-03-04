@@ -1,13 +1,13 @@
 /*		TODO LIST: 	 Features
 ============================================================
-	1) 		Automate Targets ... 1,000 trials instead of 3x?
-	2)		Improve Game play:  Fade In/Out transitions?
-	3) 		Count down the number of remaining tests
-	4) 		Closing minigame will save your progress?
-	5) 		Allow user to skip a trial?
-	6) 		Game screen is  larger than viewport
-	7) 		Game screen is draggable
-	8)		Add Game screen and icon placeholder image
+	❌ 		Automate Targets ... 1,000 trials instead of 3x?
+	❌		Improve Game play:  Fade In/Out transitions?
+	❌ 		Count down the number of remaining tests
+	❌ 		Closing minigame will save your progress?
+	❌ 		Allow user to skip a trial?
+	❌ 		Game screen is  larger than viewport
+	❌ 		Game screen is draggable
+	✅		Add Game screen and icon placeholder image
 ============================================================
 */
 
