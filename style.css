@@ -1,41 +1,52 @@
+/*		COLOR VARIABLES
+======================================================
+======================================================
+*/
+:root {
+	--red: hsla(0, 80%, 60%, 0.8);
+	--gold: hsla(60, 80%, 50%, 0.8);
+	--indigo: hsla(260, 80%, 50%, 0.8);
+}
+
+/*		Basic Containers
+======================================================
+======================================================
+*/
 body{
     font-family: Helvetica, sans-serif;
 	padding: 20px;
+	background-color: lightgrey;
 }
-
 .app {
 	position: relative;
-    height: 800px;
-	margin: 0; padding: 0;
-	background-color: lightsalmon;
+	margin: 0; 		padding: 0;
 }
 
-.target{
-    list-style: none;
-	margin: 0;		padding: 0;
-}
-.target li{
-    display: block;			width: 100px;		height: 100px;
-	position: absolute;
-}
 
-#first_target{
-    bottom: 5px;		right:20px;
-	background-color: red;
+/*		Top Navigation & Indicator
+======================================================
+======================================================
+*/
+.controls {
+	outline: 2px solid red;
+	position: absolute;		top: 25px;		z-index: 10;
+	width: 100%;
 }
-#second_target{
-	display:none;
-    bottom: 70px;		left: 40px;
-	background-color: gold;
+.indicator {
+    position: absolute;		left: 15px;
+    padding: 58px;
+    border-radius: 50%;
+	background: antiquewhite url("images/placeholder_icon_01.png") center center no-repeat;
 }
-#third_target{
-	display:none;
-    top: 50px;		right:200px;
-	background-color: aquamarine;
+.indicator .points {
+	position: absolute;		top:-10px;		right: -10px;
+	display: block;
+	padding: 15px 18px;
+	border-radius: 50%;
+	background-color: var(--red);
 }
-
-#closeButton{
-    position: absolute;		top:5px;		right:5px;
+.close_btn {
+    position: absolute;		right:5px;
 	height:20px;			width:20px;
 	padding: 10px;
 	border-radius: 50%;
@@ -45,16 +56,37 @@ body{
     color: white;
 }
 
-.indicator{
-    position: absolute;		top: 15px;		left: 15px;
-    padding: 58px;
-    border-radius: 50%;
-	background-color: antiquewhite;
+
+/*	Screen and Targets
+======================================================
+======================================================
+*/
+.board {
+	background-color: lightsalmon;
+    height: 990px;
+	position: relative;
+	background: indigo url("images/placeholder_screen.jpg") bottom right no-repeat;
 }
-.indicator .points{
-	position: absolute;		top:-10px;		right: -10px;
-	display: block;
-	padding: 15px 18px;
+.target {
+    list-style: none;
+	margin: 0;		padding: 0;
+}
+.target li {
+    display: block;			width: 75px;		height: 75px;
+	position: absolute;
 	border-radius: 50%;
-	background-color: red;
+}
+#first_target {
+    bottom: 76px;		right:406px;
+	background-color: var(--red);
+}
+#second_target {
+	display:none;
+    top: 197px;		right: 616px;
+	background-color: var(--gold);
+}
+#third_target {
+	display:none;
+    bottom: 83px;		left: -11px;
+	background-color: var(--indigo);
 }

@@ -7,17 +7,20 @@
     <title>WheresWaldo MiniGame</title>
 </head>
 <body>
-    <div id='waldoGame' class="app">
-        <div id='indicator' class="indicator"><span id='points' class='points' data-counter='5'>5</span></div>
+    <section id='waldoGame' class="app">
+		<nav class="controls">
+			<div id='indicator' class="indicator"><span id='points' class='points' data-counter='5'>5</span></div>
+			<a id='closeButton' class="close_btn" href="/"><span>&times;</span></a>
+		</nav>
 
-        <ul class='target'>
-            <li id='first_target' class='red'></li>
-            <li id ='second_target' class='orange'></li>
-            <li id ='third_target' class='blue'></li>
-        </ul>
-
-        <a id='closeButton' href="/"><span>&times;</span></a>
-    </div>
+		<div class="board" draggable="true">
+			<ul class='target'>
+				<li id='first_target' class='red'></li>
+				<li id ='second_target' class='orange'></li>
+				<li id ='third_target' class='blue'></li>
+			</ul>
+		</div>
+    </section>
 
 
     <script src="waldo.js"></script>
