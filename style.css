@@ -1,41 +1,42 @@
+/*		Basic Containers
+======================================================
+======================================================
+*/
 body{
     font-family: Helvetica, sans-serif;
 	padding: 20px;
+	background-color: lightgrey;
 }
-
 .app {
 	position: relative;
-    height: 800px;
-	margin: 0; padding: 0;
-	background-color: lightsalmon;
+	margin: 0; 		padding: 0;
 }
 
-.target{
-    list-style: none;
-	margin: 0;		padding: 0;
-}
-.target li{
-    display: block;			width: 100px;		height: 100px;
-	position: absolute;
-}
 
-#first_target{
-    bottom: 5px;		right:20px;
+/*		Top Navigation & Indicator
+======================================================
+======================================================
+*/
+.controls {
+	outline: 2px solid red;
+	position: absolute;		top: 25px;		z-index: 10;
+	width: 100%;
+}
+.indicator {
+    position: absolute;		left: 15px;
+    padding: 58px;
+    border-radius: 50%;
+	background-color: antiquewhite;
+}
+.indicator .points {
+	position: absolute;		top:-10px;		right: -10px;
+	display: block;
+	padding: 15px 18px;
+	border-radius: 50%;
 	background-color: red;
 }
-#second_target{
-	display:none;
-    bottom: 70px;		left: 40px;
-	background-color: gold;
-}
-#third_target{
-	display:none;
-    top: 50px;		right:200px;
-	background-color: aquamarine;
-}
-
-#closeButton{
-    position: absolute;		top:5px;		right:5px;
+.close_btn {
+    position: absolute;		right:5px;
 	height:20px;			width:20px;
 	padding: 10px;
 	border-radius: 50%;
@@ -45,16 +46,36 @@ body{
     color: white;
 }
 
-.indicator{
-    position: absolute;		top: 15px;		left: 15px;
-    padding: 58px;
-    border-radius: 50%;
-	background-color: antiquewhite;
+
+/*	Screen and Targets
+======================================================
+======================================================
+*/
+.board {
+	background-color: lightsalmon;
+    height: 800px;
+	position: relative;
 }
-.indicator .points{
-	position: absolute;		top:-10px;		right: -10px;
-	display: block;
-	padding: 15px 18px;
+.target {
+    list-style: none;
+	margin: 0;		padding: 0;
+}
+.target li {
+    display: block;			width: 100px;		height: 100px;
+	position: absolute;
 	border-radius: 50%;
+}
+#first_target {
+    bottom: 5px;		right:20px;
 	background-color: red;
+}
+#second_target {
+	display:none;
+    bottom: 70px;		left: 40px;
+	background-color: gold;
+}
+#third_target {
+	display:none;
+    top: 50px;		right:200px;
+	background-color: aquamarine;
 }
