@@ -1,3 +1,13 @@
+/*		COLOR VARIABLES
+======================================================
+======================================================
+*/
+:root {
+	--red: hsla(0, 80%, 60%, 0.8);
+	--gold: hsla(60, 80%, 50%, 0.8);
+	--indigo: hsla(260, 80%, 50%, 0.8);
+}
+
 /*		Basic Containers
 ======================================================
 ======================================================
@@ -26,14 +36,14 @@ body{
     position: absolute;		left: 15px;
     padding: 58px;
     border-radius: 50%;
-	background-color: antiquewhite;
+	background: antiquewhite url("images/placeholder_icon_01.png") center center no-repeat;
 }
 .indicator .points {
 	position: absolute;		top:-10px;		right: -10px;
 	display: block;
 	padding: 15px 18px;
 	border-radius: 50%;
-	background-color: red;
+	background-color: var(--red);
 }
 .close_btn {
     position: absolute;		right:5px;
@@ -53,30 +63,30 @@ body{
 */
 .board {
 	background-color: lightsalmon;
-    height: 800px;
+    height: 990px;
 	position: relative;
-	background: gold url("images/placeholder_screen.jpg") bottom right;
+	background: indigo url("images/placeholder_screen.jpg") bottom right no-repeat;
 }
 .target {
     list-style: none;
 	margin: 0;		padding: 0;
 }
 .target li {
-    display: block;			width: 100px;		height: 100px;
+    display: block;			width: 75px;		height: 75px;
 	position: absolute;
 	border-radius: 50%;
 }
 #first_target {
-    bottom: 5px;		right:20px;
-	background-color: red;
+    bottom: 76px;		right:406px;
+	background-color: var(--red);
 }
 #second_target {
 	display:none;
-    bottom: 70px;		left: 40px;
-	background-color: gold;
+    top: 197px;		right: 616px;
+	background-color: var(--gold);
 }
 #third_target {
 	display:none;
-    top: 50px;		right:200px;
-	background-color: aquamarine;
+    bottom: 83px;		left: -11px;
+	background-color: var(--indigo);
 }

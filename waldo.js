@@ -41,7 +41,10 @@ function incrementCounter (color) {
 	points.style.backgroundColor = color
 	points.innerHTML = count
 }
-
+function changeIcon (img) {
+	let icon = document.getElementById("indicator")
+	icon.style.backgroundImage = `url(images/${img})`
+}
 function show (target) {
     let nextTarget = document.getElementById(target)
     nextTarget.style.display = "block"
@@ -65,6 +68,7 @@ function playSound (sound) {
 */
 function firstComplete(){
     incrementCounter('gold')
+	changeIcon('placeholder_icon_02.png')
     show('second_target')
     playSound('Success Sound')
     hide('first_target')
