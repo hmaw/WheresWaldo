@@ -86,6 +86,7 @@ function thirdComplete(){
     // show('')
     playSound('DONE')
     hide('third_target')
+	closeGame()
 }
 /*		Execute Controller Functions
 ============================================================
