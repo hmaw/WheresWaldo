@@ -28,7 +28,7 @@ body{
 ======================================================
 */
 .controls {
-	outline: 2px solid red;
+	outline: 2px solid var(--red);
 	position: absolute;		top: 25px;		z-index: 10;
 	width: 100%;
 }
@@ -87,6 +87,6 @@ body{
 }
 #third_target {
 	display:none;
-    bottom: 83px;		left: -11px;
+    bottom: 83px;		left: 170px;
 	background-color: var(--indigo);
 }
