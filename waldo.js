@@ -1,10 +1,13 @@
 /*		TODO LIST: 	 Features
 ============================================================
-	1) 		Automate Targets ... 1,000 trials instead of 3x?
-	2)		Improve Game play:  Fade In/Out transitions?
-	3) 		Count down the number of remaining tests
-	4) 		Closing minigame will save your progress?
-	5) 		Allow user to skip a trial?
+	❌ 		Automate Targets ... 1,000 trials instead of 3x?
+	❌		Improve Game play:  Fade In/Out transitions?
+	❌ 		Count down the number of remaining tests
+	❌ 		Closing minigame will save your progress?
+	❌ 		Allow user to skip a trial?
+	❌ 		Game screen is  larger than viewport
+	❌ 		Game screen is draggable
+	✅		Add Game screen and icon placeholder image
 ============================================================
 */
 
@@ -33,12 +36,15 @@ closeButton.onclick = closeGame
 function incrementCounter (color) {
     let points = document.getElementById('points')
 	let count = Number( points.dataset.counter )
-	count-=1;
+	count = !color ? 0 : count - 1
 	points.dataset.counter = count
 	points.style.backgroundColor = color
 	points.innerHTML = count
 }
-
+function changeIcon (img) {
+	let icon = document.getElementById("indicator")
+	icon.style.backgroundImage = `url(images/${img})`
+}
 function show (target) {
     let nextTarget = document.getElementById(target)
     nextTarget.style.display = "block"
@@ -62,11 +68,26 @@ function playSound (sound) {
 */
 function firstComplete(){
     incrementCounter('gold')
+	changeIcon('placeholder_icon_02.png')
     show('second_target')
-    playSound('Success Sound')
+    playSound('SUCCES MUSIC')
     hide('first_target')
 }
-
+function secondComplete(){
+    incrementCounter('cyan')
+	changeIcon('placeholder_icon_03.png')
+    show('third_target')
+    playSound('YOUR ON FIRE!!')
+    hide('second_target')
+}
+function thirdComplete(){
+    incrementCounter(null)
+	changeIcon('none')
+    // show('')
+    playSound('DONE')
+    hide('third_target')
+	closeGame()
+}
 /*		Execute Controller Functions
 ============================================================
 		We want to execute them when the user clicks,
@@ -74,4 +95,8 @@ function firstComplete(){
 ============================================================
 */
 let first = document.getElementById('first_target')
+let second = document.getElementById('second_target')
+let third = document.getElementById('third_target')
 first.onclick = firstComplete
+second.onclick = secondComplete
+third.onclick = thirdComplete
