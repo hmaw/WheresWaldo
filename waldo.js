@@ -13,6 +13,24 @@
 ============================================================
 */
 
+//Data Array:  img url, location on page in pixels?
+let data = [{ 
+    img :"placeholder_icon_01.png", 
+    location : [null,406,76,null],
+    id : "first_target",
+    class : "red"
+},{
+    img :"placeholder_icon_02.png", 
+    location : [197,616,null,null],
+    id : "first_target",
+    class : "gold"
+},{
+    img :"placeholder_icon_03.png", 
+    location : [null,null,83,170],
+    id : "first_target",
+    class : "indigo"
+}]
+
 
 /*		Close Minigame
 ============================================================
@@ -90,6 +108,12 @@ function thirdComplete(){
     hide('third_target')
 	closeGame()
 }
+//Instead of doing three fuctions, going to set up to be reordere. 
+//check if first in array, if it is, set as first
+// if not first or last, go to next
+//if last then do close
+
+
 /*		Execute Controller Functions
 ============================================================
 		We want to execute them when the user clicks,
