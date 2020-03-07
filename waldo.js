@@ -1,6 +1,5 @@
 /*		TODO LIST: 	 Features
 ============================================================
-    ❌		Improve Game play:  Fade In/Out transitions?
     ❌ 		Automate Targets ... 1,000 trials instead of 3x?
                 Array: idx, img url, location on page
 	❌ 		Allow user to skip a trial? Need skip button & data implimented, random pick targets
@@ -9,7 +8,8 @@
     ❌       Save your progress? Keeping score or returning once you hit goal?
 	❌ 		Game screen is larger than viewport
 	❌ 		Game screen is draggable
-	✅		Add Game screen and icon placeholder image
+    ✅		Add Game screen and icon placeholder image
+    ✅		Improve Game play:  Fade In/Out transitions?
 ============================================================
 */
 
