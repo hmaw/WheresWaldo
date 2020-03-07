@@ -36,7 +36,8 @@ body{
     position: absolute;		left: 15px;
     padding: 58px;
     border-radius: 50%;
-	background: antiquewhite url("images/placeholder_icon_01.png") center center no-repeat;
+    background: antiquewhite url("images/placeholder_icon_01.png") center center no-repeat;
+    transition: all 0.4s linear;
 }
 .indicator .points {
 	position: absolute;		top:-10px;		right: -10px;
