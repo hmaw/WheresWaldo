@@ -45,7 +45,7 @@ function incrementCounter (color) {
 }
 function changeIcon (img) {
 	let icon = document.getElementById("indicator")
-	icon.style.backgroundImage = `url(images/${img})`
+    icon.style.backgroundImage = `url(images/${img})`
 }
 function show (target) {
     let nextTarget = document.getElementById(target)
