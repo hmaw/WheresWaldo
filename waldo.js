@@ -22,12 +22,12 @@ let data = [{
 },{
     img :"placeholder_icon_02.png", 
     location : [197,616,null,null],
-    id : "first_target",
+    id : "second_target",
     class : "gold"
 },{
     img :"placeholder_icon_03.png", 
     location : [null,null,83,170],
-    id : "first_target",
+    id : "third_target",
     class : "indigo"
 }]
 
@@ -112,7 +112,17 @@ function thirdComplete(){
 //check if first in array, if it is, set as first
 // if not first or last, go to next
 //if last then do close
-
+function createTarget(item){
+    console.log(item.id)
+    //createhtml element 
+    var target = document.createElement("li")
+    target.setAttribute("id", item.id);
+    target.setAttribute("class", item.class);
+    console.log(target)
+    //attach handler
+    document.querySelector(".target").appendChild(target)
+    
+}
 
 /*		Execute Controller Functions
 ============================================================
@@ -126,3 +136,4 @@ let third = document.getElementById('third_target')
 first.onclick = firstComplete
 second.onclick = secondComplete
 third.onclick = thirdComplete
+data.forEach(createTarget)
