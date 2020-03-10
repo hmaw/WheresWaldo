@@ -113,15 +113,12 @@ function thirdComplete(){
 // if not first or last, go to next
 //if last then do close
 function createTarget(item){
-    console.log(item.id)
-    //createhtml element 
-    var target = document.createElement("li")
-    target.setAttribute("id", item.id);
-    target.setAttribute("class", item.class);
-    console.log(target)
-    //attach handler
-    document.querySelector(".target").appendChild(target)
+    let container = document.querySelector(".target")
+    let el = document.createElement("li")
+    el.setAttribute("id", item.id);
+    el.setAttribute("class", item.class);
     
+    container.appendChild(el)
 }
 
 /*		Execute Controller Functions
@@ -130,10 +127,15 @@ function createTarget(item){
 		not when the page loads.
 ============================================================
 */
-let first = document.getElementById('first_target')
-let second = document.getElementById('second_target')
-let third = document.getElementById('third_target')
-first.onclick = firstComplete
-second.onclick = secondComplete
-third.onclick = thirdComplete
+// let first = document.getElementById('first_target')
+// let second = document.getElementById('second_target')
+// let third = document.getElementById('third_target')
+// first.onclick = firstComplete
+// second.onclick = secondComplete
+// third.onclick = thirdComplete
 data.forEach(createTarget)
+
+//assign img on page and then using click handlers
+//place a div on the page that you can click
+
+//have the div be in the right location
