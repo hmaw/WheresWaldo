@@ -56,7 +56,7 @@ closeButton.onclick = closeGame
 function incrementCounter (color) {
     let points = document.getElementById('points')
 	let count = Number( points.dataset.counter )
-	count = !color ? 0 : count - 1
+	count = !color ? 0 : count - 1 
 	points.dataset.counter = count
 	points.style.backgroundColor = color
 	points.innerHTML = count
@@ -108,21 +108,40 @@ function thirdComplete(){
     hide('third_target')
 	closeGame()
 }
+
+
 //Instead of doing three fuctions, going to set up to be reordere. 
 //check if first in array, if it is, set as first
 // if not first or last, go to next
 //if last then do close
-function createTarget(item){
-    console.log(item.id)
-    //createhtml element 
-    var target = document.createElement("li")
-    target.setAttribute("id", item.id);
-    target.setAttribute("class", item.class);
-    console.log(target)
-    //attach handler
-    document.querySelector(".target").appendChild(target)
-    
+
+function createTarget(current, index, orginalArr){
+    let next = null
+    let isFinal = false
+    let container = document.querySelector(".target")
+    let el = document.createElement("li")
+    if (index == orginalArr.length - 1){
+        isFinal = true
+        
+    } else {
+        next = orginalArr[index + 1]
+    }
+    el.setAttribute("id", current.id);
+    el.setAttribute("class", current.class);       // Set Attributes ID and class
+
+    el.onclick = function(){                        //if final                              NOT FINAL
+        incrementCounter( isFinal ? null : next.class )
+        changeIcon( isFinal ? "none" : next.img)
+        hide(current.id)
+        if (!isFinal){
+            show(next.id)   
+        } else {
+            closeGame()
+        }
+    }
+    container.appendChild(el)
 }
+
 
 /*		Execute Controller Functions
 ============================================================
@@ -130,10 +149,15 @@ function createTarget(item){
 		not when the page loads.
 ============================================================
 */
-let first = document.getElementById('first_target')
-let second = document.getElementById('second_target')
-let third = document.getElementById('third_target')
-first.onclick = firstComplete
-second.onclick = secondComplete
-third.onclick = thirdComplete
+// let first = document.getElementById('first_target')
+// let second = document.getElementById('second_target')
+// let third = document.getElementById('third_target')
+// first.onclick = firstComplete
+// second.onclick = secondComplete
+// third.onclick = thirdComplete
 data.forEach(createTarget)
+
+//assign img on page and then using click handlers
+//place a div on the page that you can click
+
+//have the div be in the right location
