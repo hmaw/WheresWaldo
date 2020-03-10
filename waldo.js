@@ -56,7 +56,7 @@ closeButton.onclick = closeGame
 function incrementCounter (color) {
     let points = document.getElementById('points')
 	let count = Number( points.dataset.counter )
-	count = !color ? 0 : count - 1
+	count = !color ? 0 : count - 1 
 	points.dataset.counter = count
 	points.style.backgroundColor = color
 	points.innerHTML = count
@@ -108,18 +108,38 @@ function thirdComplete(){
     hide('third_target')
 	closeGame()
 }
+
+
 //Instead of doing three fuctions, going to set up to be reordere. 
 //check if first in array, if it is, set as first
 // if not first or last, go to next
 //if last then do close
-function createTarget(item){
+
+function createTarget(current, index, orginalArr){
+    let next = null
+    let isFinal = false
     let container = document.querySelector(".target")
     let el = document.createElement("li")
-    el.setAttribute("id", item.id);
-    el.setAttribute("class", item.class);
-    
+    if (index == orginalArr.length - 1){
+        isFinal = true
+        alert("You reached the final")
+    } else {
+        
+    }
+    el.setAttribute("id", current.id);
+    el.setAttribute("class", current.class);       // Set Attributes ID and class
+
+    el.onclick = function(){                        //if final
+        // incrementCounter('cyan')                   incrementCounter(null)
+        // changeIcon('placeholder_icon_03.png')
+        // show('third_target')
+        // playSound('YOUR ON FIRE!!')
+        // hide('second_target')
+
+    }
     container.appendChild(el)
 }
+
 
 /*		Execute Controller Functions
 ============================================================
