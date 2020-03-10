@@ -122,20 +122,22 @@ function createTarget(current, index, orginalArr){
     let el = document.createElement("li")
     if (index == orginalArr.length - 1){
         isFinal = true
-        alert("You reached the final")
-    } else {
         
+    } else {
+        next = orginalArr[index + 1]
     }
     el.setAttribute("id", current.id);
     el.setAttribute("class", current.class);       // Set Attributes ID and class
 
-    el.onclick = function(){                        //if final
-        // incrementCounter('cyan')                   incrementCounter(null)
-        // changeIcon('placeholder_icon_03.png')
-        // show('third_target')
-        // playSound('YOUR ON FIRE!!')
-        // hide('second_target')
-
+    el.onclick = function(){                        //if final                              NOT FINAL
+        incrementCounter( isFinal ? null : next.class )
+        changeIcon( isFinal ? "none" : next.img)
+        hide(current.id)
+        if (!isFinal){
+            show(next.id)   
+        } else {
+            closeGame()
+        }
     }
     container.appendChild(el)
 }
