@@ -1,11 +1,12 @@
 /*		TODO LIST: 	 Features
 ===========================================================
-    ❌ 		Allow user to skip a trial? Need skip button & data implimented, random pick targets
+    ❌ 		Random pick targets
     ❌ 		Count down the number of remaining tests
-    ❌ 		Closing the game page
-    ❌       Save your progress? Keeping score or returning once you hit goal?
     ❌ 		Game screen is larger than viewport
     ❌ 		Game screen is draggable
+    ❌ 		Allow user to skip a trial? Need skip button
+    ❌ 		Closing the game page
+    ❌       Save your progress? Keeping score or returning once you hit goal?
     ✅ 		add sound message on data
     ✅ 		Automate Targets ... 1,000 trials instead of 3x?
     ✅		Add Game screen and icon placeholder image
@@ -56,6 +57,12 @@ closeButton.onclick = closeGame
 			Play a Sound, 	Increment Counter
 ============================================================
 */
+function initizalizeCount(){
+    let dataCount = data.length
+    let points = document.getElementById('points')
+    points.dataset.counter = dataCount
+    points.innerHTML = dataCount
+}
 function incrementCounter (color) {
     let points = document.getElementById('points')
 	let count = Number( points.dataset.counter )
@@ -65,8 +72,8 @@ function incrementCounter (color) {
 	points.innerHTML = count
 }
 function changeIcon (img) {
-	let icon = document.getElementById("indicator")
-    icon.style.backgroundImage = `url(images/${img})`
+    let icon = document.getElementById("indicator")
+    icon.style.backgroundImage = img == "none"? img : `url(images/${img})`
 }
 function show (target) {
     let nextTarget = document.getElementById(target)
@@ -121,4 +128,5 @@ function createTarget(current, index, orginalArr){
 		not when the page loads.
 ============================================================
 */
+initizalizeCount()
 data.forEach(createTarget)
