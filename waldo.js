@@ -86,29 +86,6 @@ function playSound (sound) {
 		These are the applications of our basic actions
 ============================================================
 */
-function firstComplete(){
-    incrementCounter('gold')
-	changeIcon('placeholder_icon_02.png')
-    show('second_target')
-    playSound('SUCCES MUSIC')
-    hide('first_target')
-}
-function secondComplete(){
-    incrementCounter('cyan')
-	changeIcon('placeholder_icon_03.png')
-    show('third_target')
-    playSound('YOUR ON FIRE!!')
-    hide('second_target')
-}
-function thirdComplete(){
-    incrementCounter(null)
-	changeIcon('none')
-    // show('')
-    playSound('DONE')
-    hide('third_target')
-	closeGame()
-}
-
 function createTarget(current, index, orginalArr){
     let next = null
     let isFinal = false
