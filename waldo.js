@@ -1,13 +1,13 @@
 /*		TODO LIST: 	 Features
-============================================================
-    ❌ 		Automate Targets ... 1,000 trials instead of 3x?
-                Array: idx, img url, location on page
-	❌ 		Allow user to skip a trial? Need skip button & data implimented, random pick targets
-	❌ 		Count down the number of remaining tests
+===========================================================
+    ❌ 		add sound message on data
+    ❌ 		Allow user to skip a trial? Need skip button & data implimented, random pick targets
+    ❌ 		Count down the number of remaining tests
     ❌ 		Closing the game page
     ❌       Save your progress? Keeping score or returning once you hit goal?
-	❌ 		Game screen is larger than viewport
-	❌ 		Game screen is draggable
+    ❌ 		Game screen is larger than viewport
+    ❌ 		Game screen is draggable
+    ✅ 		Automate Targets ... 1,000 trials instead of 3x?
     ✅		Add Game screen and icon placeholder image
     ✅		Improve Game play:  Fade In/Out transitions?
 ============================================================
@@ -109,12 +109,6 @@ function thirdComplete(){
 	closeGame()
 }
 
-
-//Instead of doing three fuctions, going to set up to be reordere. 
-//check if first in array, if it is, set as first
-// if not first or last, go to next
-//if last then do close
-
 function createTarget(current, index, orginalArr){
     let next = null
     let isFinal = false
@@ -122,14 +116,12 @@ function createTarget(current, index, orginalArr){
     let el = document.createElement("li")
     if (index == orginalArr.length - 1){
         isFinal = true
-        
     } else {
         next = orginalArr[index + 1]
     }
     el.setAttribute("id", current.id);
-    el.setAttribute("class", current.class);       // Set Attributes ID and class
-
-    el.onclick = function(){                        //if final                              NOT FINAL
+    el.setAttribute("class", current.class);
+    el.onclick = function(){
         incrementCounter( isFinal ? null : next.class )
         changeIcon( isFinal ? "none" : next.img)
         hide(current.id)
@@ -149,15 +141,4 @@ function createTarget(current, index, orginalArr){
 		not when the page loads.
 ============================================================
 */
-// let first = document.getElementById('first_target')
-// let second = document.getElementById('second_target')
-// let third = document.getElementById('third_target')
-// first.onclick = firstComplete
-// second.onclick = secondComplete
-// third.onclick = thirdComplete
 data.forEach(createTarget)
-
-//assign img on page and then using click handlers
-//place a div on the page that you can click
-
-//have the div be in the right location
