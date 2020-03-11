@@ -1,12 +1,12 @@
 /*		TODO LIST: 	 Features
 ===========================================================
     ❌ 		Random pick targets
-    ❌ 		Count down the number of remaining tests
     ❌ 		Game screen is larger than viewport
     ❌ 		Game screen is draggable
     ❌ 		Allow user to skip a trial? Need skip button
     ❌ 		Closing the game page
     ❌       Save your progress? Keeping score or returning once you hit goal?
+    ✅ 		Count down the number of remaining tests
     ✅ 		add sound message on data
     ✅ 		Automate Targets ... 1,000 trials instead of 3x?
     ✅		Add Game screen and icon placeholder image
