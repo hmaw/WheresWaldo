@@ -57,6 +57,12 @@ closeButton.onclick = closeGame
 			Play a Sound, 	Increment Counter
 ============================================================
 */
+function initizalizeCount(){
+    let dataCount = data.length
+    let points = document.getElementById('points')
+    points.dataset.counter = dataCount
+    points.innerHTML = dataCount
+}
 function incrementCounter (color) {
     let points = document.getElementById('points')
 	let count = Number( points.dataset.counter )
@@ -122,4 +128,5 @@ function createTarget(current, index, orginalArr){
 		not when the page loads.
 ============================================================
 */
+initizalizeCount()
 data.forEach(createTarget)
