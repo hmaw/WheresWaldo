@@ -72,8 +72,8 @@ function incrementCounter (color) {
 	points.innerHTML = count
 }
 function changeIcon (img) {
-	let icon = document.getElementById("indicator")
-    icon.style.backgroundImage = `url(images/${img})`
+    let icon = document.getElementById("indicator")
+    icon.style.backgroundImage = img == "none"? img : `url(images/${img})`
 }
 function show (target) {
     let nextTarget = document.getElementById(target)
