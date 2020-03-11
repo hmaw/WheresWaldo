@@ -18,17 +18,20 @@ let data = [{
     img :"placeholder_icon_01.png", 
     location : [null,406,76,null],
     id : "first_target",
-    class : "red"
+    class : "red",
+    message: "Good Job! Let's do the next one."
 },{
     img :"placeholder_icon_02.png", 
     location : [197,616,null,null],
     id : "second_target",
-    class : "gold"
+    class : "gold",
+    message: "Great Job!, let's do another."
 },{
     img :"placeholder_icon_03.png", 
     location : [null,null,83,170],
     id : "third_target",
-    class : "indigo"
+    class : "indigo",
+    message: "Your amazing! Done!"
 }]
 
 
@@ -75,10 +78,9 @@ function hide (target) {
     nextTarget.style.display = "none"
 }
 
-function playSound (sound) {
-    alert(`Playing sound : ${sound} ... progress to next step`)
+function playMessage (message) {
+    alert(message)
 }
-
 
 
 /*		Controller Functions
@@ -101,6 +103,7 @@ function createTarget(current, index, orginalArr){
     el.onclick = function(){
         incrementCounter( isFinal ? null : next.class )
         changeIcon( isFinal ? "none" : next.img)
+        playMessage(current.message)
         hide(current.id)
         if (!isFinal){
             show(next.id)   
