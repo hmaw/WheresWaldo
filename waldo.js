@@ -160,3 +160,4 @@ function createTarget(current, index, orginalArr){
 */
 initizalizeCount()
 data.forEach(createTarget)
+show("first_target")
