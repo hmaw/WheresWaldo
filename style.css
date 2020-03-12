@@ -5,7 +5,10 @@
 :root {
 	--red: hsla(0, 80%, 60%, 0.8);
 	--gold: hsla(60, 80%, 50%, 0.8);
-	--indigo: hsla(260, 80%, 50%, 0.8);
+    --indigo: hsla(260, 80%, 50%, 0.8);
+    --pink: hsla(300, 95%, 63%, 0.8);
+    --blue:hsla(230, 95%, 70%, 0.8);
+    --green:hsla(120, 70%, 10%, 0.8);
 }
 
 /*		Basic Containers
@@ -75,19 +78,24 @@ body{
 .target li {
     display: block;			width: 75px;		height: 75px;
 	position: absolute;
-	border-radius: 50%;
+    border-radius: 50%;
+    display: none;
 }
 #first_target {
-    bottom: 76px;		right:406px;
 	background-color: var(--red);
 }
 #second_target {
-	display:none;
-    top: 197px;		right: 616px;
 	background-color: var(--gold);
 }
 #third_target {
-	display:none;
-    bottom: 83px;		left: 170px;
 	background-color: var(--indigo);
+}
+#fourth_target {
+	background-color: var(--pink);
+}
+#fifth_target {
+	background-color: var(--blue);
+}
+#sixth_target {
+	background-color: var(--green);
 }

@@ -1,6 +1,10 @@
 /*		TODO LIST: 	 Features
 ===========================================================
     ❌ 		Random pick targets
+                1) Cannnot repeat
+                2) Increase targets to 5,6
+    ❌ 		Convert target Styles to be dynamic created by JS
+    ❌ 		Set the number of targets to complete game ( easy:3, difficult:10)
     ❌ 		Game screen is larger than viewport
     ❌ 		Game screen is draggable
     ❌ 		Allow user to skip a trial? Need skip button
@@ -33,6 +37,24 @@ let data = [{
     id : "third_target",
     class : "indigo",
     message: "Your amazing! Done!"
+},{ 
+    img :"placeholder_icon_01.png", 
+    location : [null,165,300,null],
+    id : "fourth_target",
+    class : "pink",
+    message: "Great Job! Again."
+},{
+    img :"placeholder_icon_01.png", 
+    location : [90,425,null,null],
+    id : "fifth_target",
+    class : "blue",
+    message: "Great Job!, Yeet!."
+},{
+    img :"placeholder_icon_01.png", 
+    location : [null,null,145,180],
+    id : "sixth_target",
+    class : "green",
+    message: "BooYah!"
 }]
 
 
@@ -88,7 +110,14 @@ function hide (target) {
 function playMessage (message) {
     alert(message)
 }
-
+function setLocation( listItem, loc_array) {
+    let [top, right, bottom, left] = loc_array
+    if (top) listItem.style.top = `${top}px`
+    if (right) listItem.style.right = `${right}px`
+    if (bottom) listItem.style.bottom = `${bottom}px`
+    if (left) listItem.style.left = `${left}px`
+    return listItem
+}
 
 /*		Controller Functions
 ============================================================
@@ -107,6 +136,7 @@ function createTarget(current, index, orginalArr){
     }
     el.setAttribute("id", current.id);
     el.setAttribute("class", current.class);
+    setLocation(el, current.location) 
     el.onclick = function(){
         incrementCounter( isFinal ? null : next.class )
         changeIcon( isFinal ? "none" : next.img)
@@ -130,3 +160,4 @@ function createTarget(current, index, orginalArr){
 */
 initizalizeCount()
 data.forEach(createTarget)
+show("first_target")
