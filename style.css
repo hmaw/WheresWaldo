@@ -5,7 +5,10 @@
 :root {
 	--red: hsla(0, 80%, 60%, 0.8);
 	--gold: hsla(60, 80%, 50%, 0.8);
-	--indigo: hsla(260, 80%, 50%, 0.8);
+    --indigo: hsla(260, 80%, 50%, 0.8);
+    --pink: hsla(300, 80%, 80%, 0.8);
+    --cyan:hsla(180, 80%,80%, 0.8);
+    --green:hsla(120, 80%, 80%, 0.8);
 }
 
 /*		Basic Containers
