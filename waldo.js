@@ -3,6 +3,7 @@
     ❌ 		Random pick targets
                 1) Cannnot repeat
                 2) Increase targets to 5,6
+    ❌ 		Convert target Styles to be dynamic created by JS
     ❌ 		Set the number of targets to complete game ( easy:3, difficult:10)
     ❌ 		Game screen is larger than viewport
     ❌ 		Game screen is draggable
