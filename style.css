@@ -7,7 +7,7 @@
 	--gold: hsla(60, 80%, 50%, 0.8);
     --indigo: hsla(260, 80%, 50%, 0.8);
     --pink: hsla(300, 80%, 80%, 0.8);
-    --cyan:hsla(180, 80%,80%, 0.8);
+    --blue:hsla(230, 80%, 80%, 0.8);
     --green:hsla(120, 80%, 80%, 0.8);
 }
 
@@ -96,19 +96,17 @@ body{
 }
 #forth_target {
     display:none;
-    top: 0px;           right: 0px;
-    bottom: 0px;		left: 0px;
+    right: 165px;
+    bottom: 300px;		
 	background-color: var(--pink);
 }
 #fifth_target {
     display:none;
-    top: 0px;           right: 0px;
-    bottom: 0px;		left: 0px;
-	background-color: var(--cyan);
+    top: 90px;           right: 425px;
+	background-color: var(--blue);
 }
 #sixth_target {
     display:none;
-    top: 0px;           right: 0px;
-    bottom: 0px;		left: 0px;
+    bottom: 145px;		left: 180px;
 	background-color: var(--green);
 }
