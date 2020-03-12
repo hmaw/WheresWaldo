@@ -36,6 +36,24 @@ let data = [{
     id : "third_target",
     class : "indigo",
     message: "Your amazing! Done!"
+},{ 
+    img :"placeholder_icon_01.png", 
+    location : [null,165,300,null],
+    id : "fourth_target",
+    class : "pink",
+    message: "Great Job! Again."
+},{
+    img :"placeholder_icon_01.png", 
+    location : [90,425,null,null],
+    id : "fifth_target",
+    class : "cyan",
+    message: "Great Job!, Yeet!."
+},{
+    img :"placeholder_icon_01.png", 
+    location : [null,null,145,180],
+    id : "sixth_target",
+    class : "green",
+    message: "BooYah!"
 }]
 
 
