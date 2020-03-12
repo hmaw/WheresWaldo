@@ -78,35 +78,24 @@ body{
 .target li {
     display: block;			width: 75px;		height: 75px;
 	position: absolute;
-	border-radius: 50%;
+    border-radius: 50%;
+    display: none;
 }
 #first_target {
-    /* bottom: 76px;		right:406px; */
 	background-color: var(--red);
 }
 #second_target {
-	display:none;
-    /* top: 197px;		right: 616px; */
 	background-color: var(--gold);
 }
 #third_target {
-	display:none;
-    /* bottom: 83px;		left: 170px; */
 	background-color: var(--indigo);
 }
 #fourth_target {
-    /* display:none; */
-    /* right: 165px;
-    bottom: 300px;		 */
 	background-color: var(--pink);
 }
 #fifth_target {
-    /* display:none; */
-    /* top: 90px;           right: 425px; */
 	background-color: var(--blue);
 }
 #sixth_target {
-    /* display:none; */
-    /* bottom: 145px;		left: 180px; */
 	background-color: var(--green);
 }
