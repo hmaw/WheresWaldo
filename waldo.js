@@ -110,7 +110,14 @@ function hide (target) {
 function playMessage (message) {
     alert(message)
 }
-
+function setLocation( listItem, loc_array) {
+    let [top, right, bottom, left] = loc_array
+    if (top) listItem.style.top = `${top}px`
+    if (right) listItem.style.right = `${right}px`
+    if (bottom) listItem.style.bottom = `${bottom}px`
+    if (left) listItem.style.left = `${left}px`
+    return listItem
+}
 
 /*		Controller Functions
 ============================================================
@@ -129,6 +136,7 @@ function createTarget(current, index, orginalArr){
     }
     el.setAttribute("id", current.id);
     el.setAttribute("class", current.class);
+    setLocation(el, current.location) 
     el.onclick = function(){
         incrementCounter( isFinal ? null : next.class )
         changeIcon( isFinal ? "none" : next.img)

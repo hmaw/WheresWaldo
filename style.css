@@ -81,32 +81,32 @@ body{
 	border-radius: 50%;
 }
 #first_target {
-    bottom: 76px;		right:406px;
+    /* bottom: 76px;		right:406px; */
 	background-color: var(--red);
 }
 #second_target {
 	display:none;
-    top: 197px;		right: 616px;
+    /* top: 197px;		right: 616px; */
 	background-color: var(--gold);
 }
 #third_target {
 	display:none;
-    bottom: 83px;		left: 170px;
+    /* bottom: 83px;		left: 170px; */
 	background-color: var(--indigo);
 }
 #fourth_target {
     /* display:none; */
-    right: 165px;
-    bottom: 300px;		
+    /* right: 165px;
+    bottom: 300px;		 */
 	background-color: var(--pink);
 }
 #fifth_target {
     /* display:none; */
-    top: 90px;           right: 425px;
+    /* top: 90px;           right: 425px; */
 	background-color: var(--blue);
 }
 #sixth_target {
     /* display:none; */
-    bottom: 145px;		left: 180px;
+    /* bottom: 145px;		left: 180px; */
 	background-color: var(--green);
 }
