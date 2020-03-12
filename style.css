@@ -94,3 +94,21 @@ body{
     bottom: 83px;		left: 170px;
 	background-color: var(--indigo);
 }
+#forth_target {
+    display:none;
+    top: 0px;           right: 0px;
+    bottom: 0px;		left: 0px;
+	background-color: var(--pink);
+}
+#fifth_target {
+    display:none;
+    top: 0px;           right: 0px;
+    bottom: 0px;		left: 0px;
+	background-color: var(--cyan);
+}
+#sixth_target {
+    display:none;
+    top: 0px;           right: 0px;
+    bottom: 0px;		left: 0px;
+	background-color: var(--green);
+}
