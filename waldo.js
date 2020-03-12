@@ -1,6 +1,9 @@
 /*		TODO LIST: 	 Features
 ===========================================================
     ❌ 		Random pick targets
+                1) Cannnot repeat
+                2) Increase targets to 5,6
+    ❌ 		Set the number of targets to complete game ( easy:3, difficult:10)
     ❌ 		Game screen is larger than viewport
     ❌ 		Game screen is draggable
     ❌ 		Allow user to skip a trial? Need skip button
