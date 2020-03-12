@@ -47,7 +47,7 @@ let data = [{
     img :"placeholder_icon_01.png", 
     location : [90,425,null,null],
     id : "fifth_target",
-    class : "cyan",
+    class : "blue",
     message: "Great Job!, Yeet!."
 },{
     img :"placeholder_icon_01.png", 

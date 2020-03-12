@@ -6,9 +6,9 @@
 	--red: hsla(0, 80%, 60%, 0.8);
 	--gold: hsla(60, 80%, 50%, 0.8);
     --indigo: hsla(260, 80%, 50%, 0.8);
-    --pink: hsla(300, 80%, 80%, 0.8);
+    --pink: hsla(300, 95%, 63%, 0.8);
     --blue:hsla(230, 95%, 70%, 0.8);
-    --green:hsla(120, 95%, 60%, 0.8);
+    --green:hsla(120, 70%, 10%, 0.8);
 }
 
 /*		Basic Containers
@@ -94,19 +94,19 @@ body{
     bottom: 83px;		left: 170px;
 	background-color: var(--indigo);
 }
-#forth_target {
-    display:none;
+#fourth_target {
+    /* display:none; */
     right: 165px;
     bottom: 300px;		
 	background-color: var(--pink);
 }
 #fifth_target {
-    display:none;
+    /* display:none; */
     top: 90px;           right: 425px;
 	background-color: var(--blue);
 }
 #sixth_target {
-    display:none;
+    /* display:none; */
     bottom: 145px;		left: 180px;
 	background-color: var(--green);
 }
