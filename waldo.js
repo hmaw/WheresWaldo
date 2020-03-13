@@ -2,10 +2,9 @@
 ===========================================================
     ❌ 		Random pick targets
                 1) Cannnot repeat
-                2) Increase targets to 5,6
-    ❌ 		Convert target Styles to be dynamic created by JS
+    ❌ 		Targets are now positioned by JS instead of CSS
                     1) Convert colors to Name,Value object
-    ❌ 		Set the number of targets to complete game ( easy:3, difficult:10)
+    ❌ 		Add a config object for number of targets ( easy:3, difficult:10)
     ❌ 		Game screen is larger than viewport
     ❌ 		Game screen is draggable
     ❌ 		Allow user to skip a trial? Need skip button
@@ -20,38 +19,38 @@
 */
 
 //Data Array:  img url, location on page in pixels?
-let data = [{ 
-    img :"placeholder_icon_01.png", 
+let data = [{
+    img :"placeholder_icon_01.png",
     location : [null,406,76,null],
     id : "first_target",
     class : "red",
     message: "Good Job! Let's do the next one."
 },{
-    img :"placeholder_icon_02.png", 
+    img :"placeholder_icon_02.png",
     location : [197,616,null,null],
     id : "second_target",
     class : "gold",
     message: "Great Job!, let's do another."
 },{
-    img :"placeholder_icon_03.png", 
+    img :"placeholder_icon_03.png",
     location : [null,null,83,170],
     id : "third_target",
     class : "indigo",
     message: "Your amazing! Done!"
-},{ 
-    img :"placeholder_icon_01.png", 
+},{
+    img :"placeholder_icon_04.png",
     location : [null,165,300,null],
     id : "fourth_target",
     class : "pink",
     message: "Great Job! Again."
 },{
-    img :"placeholder_icon_01.png", 
+    img :"placeholder_icon_05.png",
     location : [90,425,null,null],
     id : "fifth_target",
     class : "blue",
     message: "Great Job!, Yeet!."
 },{
-    img :"placeholder_icon_01.png", 
+    img :"placeholder_icon_06.png",
     location : [null,null,145,180],
     id : "sixth_target",
     class : "green",
@@ -89,7 +88,7 @@ function initizalizeCount(){
 function incrementCounter (color) {
     let points = document.getElementById('points')
 	let count = Number( points.dataset.counter )
-	count = !color ? 0 : count - 1 
+	count = !color ? 0 : count - 1
 	points.dataset.counter = count
 	points.style.backgroundColor = color
 	points.innerHTML = count
@@ -137,14 +136,14 @@ function createTarget(current, index, orginalArr){
     }
     el.setAttribute("id", current.id);
     el.setAttribute("class", current.class);
-    setLocation(el, current.location) 
+    setLocation(el, current.location)
     el.onclick = function(){
         incrementCounter( isFinal ? null : next.class )
         changeIcon( isFinal ? "none" : next.img)
         playMessage(current.message)
         hide(current.id)
         if (!isFinal){
-            show(next.id)   
+            show(next.id)
         } else {
             closeGame()
         }
