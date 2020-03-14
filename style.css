@@ -4,11 +4,6 @@
 */
 :root {
 	--red: hsla(0, 80%, 60%, 0.8);
-	--gold: hsla(60, 80%, 50%, 0.8);
-    --indigo: hsla(260, 80%, 50%, 0.8);
-    --pink: hsla(300, 95%, 63%, 0.8);
-    --blue:hsla(230, 95%, 70%, 0.8);
-    --green:hsla(120, 70%, 10%, 0.8);
 }
 
 /*		Basic Containers

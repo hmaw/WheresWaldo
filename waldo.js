@@ -1,15 +1,16 @@
 /*		TODO LIST: 	 Features
 ===========================================================
     ❌ 		Random pick targets
-                1) Cannnot repeat
-    ❌ 		Targets are now positioned by JS instead of CSS
-                    1) Convert colors to Name,Value object
+				1) Cannnot repeat
+	❌		Remove Css inital color and moved into a initilizedColor function
     ❌ 		Add a config object for number of targets ( easy:3, difficult:10)
     ❌ 		Game screen is larger than viewport
     ❌ 		Game screen is draggable
     ❌ 		Allow user to skip a trial? Need skip button
     ❌ 		Closing the game page
-    ❌       Save your progress? Keeping score or returning once you hit goal?
+	❌       Save your progress? Keeping score or returning once you hit goal?
+	✅ 		Targets are now positioned by JS instead of CSS
+    ✅       Convert colors to Name,Value object
     ✅ 		Count down the number of remaining tests
     ✅ 		add sound message on data
     ✅ 		Automate Targets ... 1,000 trials instead of 3x?
