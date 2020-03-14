@@ -135,7 +135,8 @@ function createTarget(current, index, orginalArr){
         next = orginalArr[index + 1]
     }
     el.setAttribute("id", current.id);
-    el.setAttribute("class", current.class);
+	el.setAttribute("class", current.color.name);
+	el.style.backgroundColor = current.color.code
     setLocation(el, current.location)
     el.onclick = function(){
         incrementCounter( isFinal ? null : next.class )
