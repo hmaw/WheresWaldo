@@ -22,38 +22,38 @@
 let data = [{
     img :"placeholder_icon_01.png",
     location : [null,406,76,null],
-    id : "first_target",
-    class : "red",
+	id : "first_target",
+	color: { "name": "red", "code": "hsla(0, 80%, 60%, 0.8)"},
     message: "Good Job! Let's do the next one."
 },{
     img :"placeholder_icon_02.png",
     location : [197,616,null,null],
-    id : "second_target",
-    class : "gold",
+	id : "second_target",
+	color: { "name": "yellow", "code": "hsla(60, 80%, 50%, 0.8)"},
     message: "Great Job!, let's do another."
 },{
     img :"placeholder_icon_03.png",
     location : [null,null,83,170],
-    id : "third_target",
-    class : "indigo",
+	id : "third_target",
+	color: { "name": "indigo", "code": "hsla(260, 80%, 50%, 0.8)"},
     message: "Your amazing! Done!"
 },{
     img :"placeholder_icon_04.png",
     location : [null,165,300,null],
-    id : "fourth_target",
-    class : "pink",
+	id : "fourth_target",
+	color: { "name": "pink", "code": "hsla(300, 95%, 63%, 0.8)"},
     message: "Great Job! Again."
 },{
     img :"placeholder_icon_05.png",
     location : [90,425,null,null],
-    id : "fifth_target",
-    class : "blue",
+	id : "fifth_target",
+	color: { "name": "blue", "code": "hsla(230, 95%, 70%, 0.8)"},
     message: "Great Job!, Yeet!."
 },{
     img :"placeholder_icon_06.png",
     location : [null,null,145,180],
-    id : "sixth_target",
-    class : "green",
+	id : "sixth_target",
+	color: { "name": "green", "code": "hsla(120, 70%, 10%, 0.8)"},
     message: "BooYah!"
 }]
 
